@@ -10,6 +10,9 @@
 </div>
 
 # SIDE-PROJECT 01 / 십이간지 연애유형 테스트 !!
-> 십이간지로 알아보는 연애유형 테스트 
+> 십이간지로 알아보는 연애유형 테스트
+>
+# Figma Design
+![main](https://github.com/HongDawww/SIDE-PROJECT-COLLECTION/assets/142575028/91e041de-c462-4f69-93c9-5f4be859ee7c)
 
 
