@@ -7,7 +7,7 @@
 }
 
 #shareResult {
-	background-color: whitesmoke;
+		background-color: whitesmoke;
 	width: 80%;
 	text-align: center;
 	border-radius: 20px;
@@ -37,3 +37,16 @@ body {
 
 }
 
+.gohome {
+	color: white;
+	background-color: pink;
+	font-size: 20px;
+	border: 0px;
+	border-radius: 20px;
+}
+
+.gohomg:hover , .gohome:focus {
+	background-color: whitesmoke;
+	color: pink;
+
+}
