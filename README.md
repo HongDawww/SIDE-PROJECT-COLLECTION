@@ -13,6 +13,11 @@
 > 십이간지로 알아보는 연애유형 테스트
 >
 # Figma Design
+
 ![main](https://github.com/HongDawww/SIDE-PROJECT-COLLECTION/assets/142575028/91e041de-c462-4f69-93c9-5f4be859ee7c)
+![Group 26](https://github.com/HongDawww/SIDE-PROJECT-COLLECTION/assets/142575028/4e31b51e-c0cd-4321-91f0-4bd07f2003b8)
+![Group 25](https://github.com/HongDawww/SIDE-PROJECT-COLLECTION/assets/142575028/d6cc34fa-b973-4c89-b33f-78a4d538179c)
+
+
 
 
