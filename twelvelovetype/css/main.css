@@ -1,3 +1,6 @@
+body {
+	background-color: #ff909a!important;
+}
 #main {
 	background-color: whitesmoke;
 	width: 80%;
@@ -6,7 +9,4 @@
 }
 p {
 	font-size: 28px;
-}
-body {
-	background-color: #ff909a!important;
 }

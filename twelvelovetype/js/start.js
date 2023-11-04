@@ -5,6 +5,11 @@ const endPoint = 12;
 const select = [0,0,0,0,0,0,0,0,0,0,0,0];
 
 function calResult () {
+
+	
+	let result = select.indexOf(Math.max(...select));
+	return result;
+
 	// let pointArray = [
 	// 	{ name: 'mouse', value:0, key: 0}
 	// 	,{ name: 'cow', value:0, key: 1}
@@ -40,9 +45,6 @@ function calResult () {
 	// 	return 0;
 	// });
 
-	let result = select.indexOf(Math.max(...select));
-	return result;
-	
 	// let resultWord = resultArray[0].key;
 	// return resultWord;
 }
