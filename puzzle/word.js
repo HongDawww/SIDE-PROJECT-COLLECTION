@@ -1,46 +1,46 @@
-//html elements
-var word1 = document.getElementById('word1'); //answer
-var word2 = document.getElementById('word2'); //buttons
-var check = document.getElementById('check'); //word1 === word2?
-var progress = document.getElementById('progress'); //progress check 
-var time = document.getElementById('time');
+// HTML elements
+const word1 = document.getElementById('word1'); // answer
+const word2 = document.getElementById('word2'); // buttons
+const check = document.getElementById('check'); // word1 === word2?
+const progress = document.getElementById('progress'); // progress check 
+const time = document.getElementById('time');
 
-//game objects
-var game = {
-    'btns': [],
-    'maxPlay': 3,
-    'current': 0
+// Game objects
+const game = {
+    btns: [],
+    maxPlay: 3,
+    current: 0,
 };
 
 game.startTime = Date.now();
 
 game.words = 'apple,linux,javascript,tutorial,codesquad,baby,girlfriend,legend'.split(',');
 
-//choose 1 word from words;
+// Choose 1 word from words;
 game.choose = function () {
-    var idx = Math.floor(Math.random() * this.words.length);
+    const idx = Math.floor(Math.random() * this.words.length);
     this.answer = this.words[idx];
     this.letters = this.answer.split('');
     word1.innerHTML = this.answer;
 };
 
 game.addButtons = function () {
-    for (var i = 0; i < this.letters.length; i++) {
-        var btn = document.createElement('button');
+    for (let i = 0; i < this.letters.length; i++) {
+        const btn = document.createElement('button');
         btn.innerHTML = this.letters[i];
         word2.appendChild(btn);
         this.btns.push(btn);
     }
 };
 
-game.removeButtons = function() {
-    for (var i = 0; i < this.btns.length; i++) {
+game.removeButtons = function () {
+    for (let i = 0; i < this.btns.length; i++) {
         word2.removeChild(this.btns[i]);
     }
     this.btns = [];
-}
+};
 
-game.checkGood = function() {
+game.checkGood = function () {
     return this.answer === this.letters.join('');
 };
 
@@ -59,18 +59,17 @@ game.init = function () {
 };
 game.init();
 
-
 game.copyBtnText = function () {
-    for (var i = 0; i < this.letters.length; i++) {
+    for (let i = 0; i < this.letters.length; i++) {
         this.btns[i].innerHTML = this.letters[i];
     }
 };
 
 game.swap = function () {
-    var temp = [];
-    //copy and swap
-    while (game.letters.length != 0) {
-        var s = game.letters.pop();
+    const temp = [];
+    // Copy and swap
+    while (game.letters.length !== 0) {
+        const s = game.letters.pop();
         temp.push(s);
     }
     game.letters = temp;
@@ -79,74 +78,74 @@ game.swap = function () {
 };
 
 game.rshift = function () {
-    var s = game.letters.pop();
+    const s = game.letters.pop();
     game.letters.unshift(s);
     game.copyBtnText();
     game.updateDisplay();
 };
 
 game.lshift = function () {
-    var s = game.letters.shift();
+    const s = game.letters.shift();
     game.letters.push(s);
     game.copyBtnText();
     game.updateDisplay();
 };
 
-game.progress = function() {
+game.progress = function () {
     if (game.checkGood()) {
         game.current++;
         game.removeButtons();
         game.init();
         game.shuffle();
-        var str = "";
-        for (var i = 0; i < game.current; i++) {
-            str += "O";
+        let str = '';
+        for (let i = 0; i < game.current; i++) {
+            str += 'O';
         }
         progress.innerHTML = str;
     }
 
-    if (game.current == game.maxPlay) {
-        var sec = (Date.now() - game.startTime) /1000;
-        alert("Good! Your Record: " + sec + " sec");
+    if (game.current === game.maxPlay) {
+        const sec = (Date.now() - game.startTime) / 1000;
+        alert('Good! Your Record: ' + sec + ' sec');
         clearInterval(x);
-        check.innerHTML = "Thanks for playing";
+        check.innerHTML = 'Thanks for playing';
     }
 };
 
-//event hadler for swap button
-var swap = function () {
+// Event handlers
+const swap = function () {
     game.swap();
     game.progress();
 };
 
-var rshift = function () {
+const rshift = function () {
     game.rshift();
     game.progress();
 };
 
-var lshift = function() {
+const lshift = function () {
     game.lshift();
     game.progress();
 };
 
-//shuffle
+// Shuffle
 game.shuffle = function () {
-    var toggle = Math.floor(Math.random() * 2) === 0;
+    const toggle = Math.floor(Math.random() * 2) === 0;
     if (toggle) {
         game.swap();
     }
 
-    var rmax = Math.max(game.answer.length - 2, 1);
-    var n = Math.floor(Math.random() * rmax) + 1;
-    for (var i = 0; i < n; i++) {
+    const rmax = Math.max(game.answer.length - 2, 1);
+    const n = Math.floor(Math.random() * rmax) + 1;
+    for (let i = 0; i < n; i++) {
         game.rshift();
     }
 };
 game.shuffle();
 
-var updateTime = function() {
-    var now = Date.now() - game.startTime;
-    time.innerHTML = (now / 1000) + " s";
-}
+const updateTime = function () {
+    const now = Date.now() - game.startTime;
+    time.innerHTML = now / 1000 + ' s';
+};
 
-var x = setInterval(updateTime, 50);
+const intervalId = setInterval(updateTime, 50);
