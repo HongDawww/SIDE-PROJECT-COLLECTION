@@ -1,0 +1,16 @@
+#output {
+	background-color: darkblue;
+	width: 480px;
+	padding: 10px;
+	font-family: courier;
+	font-size: 20px;
+	color: white;
+}
+
+button {
+	font-size: 20px;
+	background-color: gray;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+}
