@@ -31,6 +31,13 @@
 ![챌린지](https://github.com/HongDawww/SIDE-PROJECT-COLLECTION/assets/142575028/30ae2af8-fd47-4d3b-bd82-9de97eed90f7)
 ![챌린지2](https://github.com/HongDawww/SIDE-PROJECT-COLLECTION/assets/142575028/48f14377-489f-4657-94dc-6fc62b11206b)
 
+# SIDE-PROJECT 03 / 그림판 
+> 자유롭게 그림을 그리는 JS그림판
+
+# Design
+![canvas](https://github.com/HongDawww/SIDE-PROJECT-COLLECTION/assets/142575028/d6a2b355-f26e-4457-8c69-40022f8b5e27)
+
+
 
  🤔 ❓ : 알게된 것들과 개인의 고찰
 
